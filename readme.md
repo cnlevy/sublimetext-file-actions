@@ -7,6 +7,18 @@ Adds 3 operations to the Sidebar menu:
 - Move file
 - Duplicate file
 
-Sidebar Enhancements is a full featured plugin, but i only need a small part of its functionality, so i made this plugin
+Sidebar Enhancements is a full featured plugin, but i only need a small part of its functionality, so i made this plugin.
+It can also copy the filename, which is useful for inserting src <script> tags from bower_components after installing a new dependency using bower
 
-![FileActions][FileActions.png]
+
+![FileActions](FileActions.png)
+
+## Copying from a relative path
+
+If you don't want to copy the filemname from the root of your project, create the file Packages/User/FileActions.sublime-settings (the User folder is accessibled from Preferences -> Browse Packages ... in the menu of SublimeText), and paste the following:
+
+```
+{
+	"copy_filename_root": "/admin"
+}
+```
