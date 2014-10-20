@@ -1,0 +1,17 @@
+[
+	{
+		"caption": "Copy filename relative to /", 
+		"id": "file-actions-copy-filename", 
+		"command": "copy_relative_filename"
+	}, 
+	{
+		"caption": "Move File...", 
+		"id": "file-actions-move", 
+		"command": "move_file"
+	}, 
+	{
+		"caption": "Duplicate File...", 
+		"id": "file-actions-duplicate", 
+		"command": "duplicate_file"
+	}
+]
