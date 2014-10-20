@@ -1,4 +1,4 @@
-# Sidebar Enhancements
+# FileActions
 
 ## Description
 
