@@ -7,7 +7,8 @@ Adds 3 operations to the Sidebar menu:
 - Move file
 - Duplicate file
 
-Sidebar Enhancements is a full featured plugin, but i only need a small part of its functionality, so i made this plugin.
+Sidebar Enhancements is a full featured plugin, but I only needed a small part of its functionality, so I made this plugin.
+
 It can also copy the filename, which is useful for inserting src &lt;script&gt; tags from bower_components after installing a new dependency using bower
 
 
