@@ -1,0 +1,8 @@
+[
+{"id": "file"},
+{
+	"caption": "Copy filename relative to /", 
+	"id": "file-actions-copy-filename", 
+	"command": "copy_relative_filename"
+}
+]

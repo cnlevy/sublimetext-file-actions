@@ -9,13 +9,19 @@ class CopyRelativeFilenameCommand(sublime_plugin.WindowCommand):
 		
 	def copy_filename_root_changed(self,root):
 		self.root_folder = root
-		menu = sublime.load_resource('Packages/FileActions/Side Bar.sublime-menu')
+		self.saveRoot(root, 
+			sublime.load_resource('Packages/FileActions/Side Bar.sublime-menu'), 
+			os.path.join(sublime.packages_path(), 'User', 'FileActions', 'Side Bar.sublime-menu'))
+		self.saveRoot(root, 
+			sublime.load_resource('Packages/FileActions/Context.sublime-menu'), 
+			os.path.join(sublime.packages_path(), 'User', 'FileActions', 'Context.sublime-menu'))
+		
+	def saveRoot(self, root, menu, saveAs):
 		menu_json = json.loads(menu)
-		menu_item = [item for item in menu_json if item['command'] == "copy_relative_filename"][0]
+		menu_item = [item for item in menu_json if 'command' in item and item['command'] == 'copy_relative_filename'][0]
 		new_caption = "Copy filename relative to "+root
 		menu_item['caption'] = new_caption
-		menu_filename = os.path.join(sublime.packages_path(), "User", 'Side Bar.sublime-menu')
-		with open(menu_filename,'w') as f:
+		with open(saveAs,'w') as f:
 			json.dump(menu_json, f, indent="\t")
 
 	def run(self):

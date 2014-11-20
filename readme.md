@@ -3,9 +3,12 @@
 ## Description
 
 Adds 3 operations to the Sidebar menu:
-- Copy filename
+- Copy relative filename
 - Move file
 - Duplicate file
+
+And 1 to the Context menu:
+- Copy relative filename
 
 Sidebar Enhancements is a full featured plugin, but I only needed a small part of its functionality, so I made this plugin.
 
@@ -16,7 +19,7 @@ It can also copy the filename, which is useful for inserting src &lt;script&gt; 
 
 ## Copying from a relative path
 
-If you don't want to copy the filemname from the root of your project, create the file Packages/User/FileActions.sublime-settings (the User folder is accessibled from Preferences -> Browse Packages ... in the menu of SublimeText), and paste the following:
+If you don't want to copy the filemname from the root of your project, create the file Packages/User/FileActions.sublime-settings (the User folder is accessible from Preferences -> Browse Packages ... in the menu of SublimeText), and paste the following:
 
 ```
 {
